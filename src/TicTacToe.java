@@ -16,6 +16,9 @@ public class TicTacToe {
     JPanel textPanel = new JPanel();
     JPanel playPanel = new JPanel();
     JPanel restartWinPanel;
+    JPanel xoPanel;
+    JPanel xxPanel;
+    
 	 	 
 	JButton restart;
 
@@ -56,6 +59,11 @@ public class TicTacToe {
 
         restartWinPanel = new JPanel();
 		restart = new JButton("Restart");
+
+        xoPanel = new JPanel();
+        xoPanel.setBackground(Color.LIGHT_GRAY);
+        xxPanel = new JPanel();
+        xxPanel.setBackground(Color.LIGHT_GRAY);
 		
 		xWinLabel = new JLabel("X's Win: " + Integer.toString(xWin));
 		xWinLabel.setForeground(Color.black);
@@ -66,12 +74,15 @@ public class TicTacToe {
 		oWinLabel.setForeground(Color.black);
 		oWinLabel.setBackground(Color.DARK_GRAY);
 		oWinLabel.setFont(new Font("Arial", Font.PLAIN, 20));
+
+        xxPanel.add(xWinLabel);
+        xoPanel.add(oWinLabel);
 		
 		restartWinPanel.setLayout(new BorderLayout());
         restartWinPanel.setBackground(Color.LIGHT_GRAY);
 		restartWinPanel.add(restart, BorderLayout.CENTER);
-		restartWinPanel.add(xWinLabel, BorderLayout.WEST);
-		restartWinPanel.add(oWinLabel, BorderLayout.EAST);
+		restartWinPanel.add(xxPanel, BorderLayout.WEST);
+		restartWinPanel.add(xoPanel, BorderLayout.EAST);
 
         for(int r=0; r<3; r++){
             for(int c=0; c<3; c++){
