@@ -129,7 +129,7 @@ public class TicTacToe {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				textLabel.setText("Jogo da Velha");
+				textLabel.setText("Tic-Tac-Toe");
 				for(JButton[] buttonss : buttons)
 				for(JButton button : buttonss) {
 					button.setBackground(Color.darkGray);
