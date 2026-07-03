@@ -156,11 +156,11 @@ public class TicTacToe {
         for(int i = 0; i<buttons.length; i++) {
 			for(int j=0; j<buttons.length; j++) {
 
-				if(buttons[i][0].getText() == "") continue; //horizontal
-				if(buttons[0][j].getText() == "") continue; //vertical
+				if(buttons[i][0].getText() == "" && buttons[i][2].getText() == "") continue; //horizontal
+				if(buttons[0][j].getText() == "" && buttons[2][j].getText() == "") continue; //vertical
 				if(buttons[1][1].getText() == "") continue; //Anti diagonal
 
-
+				
 				if(buttons[i][0].getText() == buttons[i][1].getText() &&
 						buttons[i][0].getText() == buttons[i][2].getText()) {
 					buttonsList = List.of(buttons[i][0],buttons[i][1], buttons[i][2]);
